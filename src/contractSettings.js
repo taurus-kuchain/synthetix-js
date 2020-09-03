@@ -7,6 +7,7 @@ const SUPPORTED_NETWORKS = {
   1: 'mainnet',
   3: 'ropsten',
   4: 'rinkeby',
+  20: 'local',
   42: 'kovan',
 };
 
@@ -24,7 +25,11 @@ class ContractSettings {
     this.network = SUPPORTED_NETWORKS[Number(this.networkId)];
     this.provider = provider || getDefaultProvider();
     if (!provider && networkId) {
-      this.provider = getDefaultProvider(this.network);
+      if (networkId === 20) {
+        this.provider = getDefaultProvider('homestead');
+      } else {
+        this.provider = getDefaultProvider(this.network);
+      }
     }
     this.signer = signer;
     this.addressList = addresses[this.networkId];

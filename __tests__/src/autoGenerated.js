@@ -1,4 +1,4 @@
-import * as snx from 'synthetix';
+import * as snx from 'synthetix-a';
 import { SynthetixJs } from '../../src/index.node.js';
 import ContractSettings from '../../src/contractSettings';
 import { contracts } from '../../tools/abitojs';

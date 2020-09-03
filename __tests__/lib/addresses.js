@@ -1,6 +1,6 @@
 import ContractSettings from '../../src/contractSettings';
 import addresses from '../../lib/addresses';
-import * as snx from 'synthetix';
+import * as snx from 'synthetix-a';
 
 const { SUPPORTED_NETWORKS } = ContractSettings;
 

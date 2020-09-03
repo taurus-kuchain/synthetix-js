@@ -22,6 +22,20 @@
 		"inputs": [
 			{
 				"indexed": false,
+				"internalType": "uint256",
+				"name": "minimumStakeTime",
+				"type": "uint256"
+			}
+		],
+		"name": "MinimumStakeTimeUpdated",
+		"type": "event",
+		"signature": "0x2b0fa66d155c9598699cb6569577f27b95729bbf580268eed39db6bc4e814477"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
 				"internalType": "address",
 				"name": "oldOwner",
 				"type": "address"
@@ -94,22 +108,6 @@
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "CONTRACT_NAME",
-		"outputs": [
-			{
-				"internalType": "bytes32",
-				"name": "",
-				"type": "bytes32"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function",
-		"signature": "0x614d08f8"
-	},
-	{
-		"constant": true,
-		"inputs": [],
 		"name": "LAST_ISSUE_EVENT",
 		"outputs": [
 			{
@@ -140,6 +138,22 @@
 		"signature": "0xe3235c91"
 	},
 	{
+		"constant": true,
+		"inputs": [],
+		"name": "MAX_MINIMUM_STAKING_TIME",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function",
+		"signature": "0x8ce2f55b"
+	},
+	{
 		"constant": false,
 		"inputs": [],
 		"name": "acceptOwnership",
@@ -168,18 +182,18 @@
 	{
 		"constant": true,
 		"inputs": [],
-		"name": "anySynthOrSNXRateIsInvalid",
+		"name": "anySynthOrSNXRateIsStale",
 		"outputs": [
 			{
 				"internalType": "bool",
-				"name": "anyRateInvalid",
+				"name": "anyRateStale",
 				"type": "bool"
 			}
 		],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function",
-		"signature": "0x4e99bda9"
+		"signature": "0xf354cad1"
 	},
 	{
 		"constant": true,
@@ -394,7 +408,7 @@
 				"type": "address"
 			}
 		],
-		"name": "collateralisationRatioAndAnyRatesInvalid",
+		"name": "collateralisationRatioAndAnyRatesStale",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -403,14 +417,14 @@
 			},
 			{
 				"internalType": "bool",
-				"name": "anyRateIsInvalid",
+				"name": "anyRateIsStale",
 				"type": "bool"
 			}
 		],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function",
-		"signature": "0xae3bbbbb"
+		"signature": "0xa6eb4f95"
 	},
 	{
 		"constant": true,
@@ -476,22 +490,6 @@
 		"stateMutability": "view",
 		"type": "function",
 		"signature": "0x631e1444"
-	},
-	{
-		"constant": true,
-		"inputs": [],
-		"name": "issuanceRatio",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function",
-		"signature": "0xb410a034"
 	},
 	{
 		"constant": false,
@@ -812,6 +810,22 @@
 		"constant": false,
 		"inputs": [
 			{
+				"internalType": "uint256",
+				"name": "_seconds",
+				"type": "uint256"
+			}
+		],
+		"name": "setMinimumStakeTime",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function",
+		"signature": "0xe9422046"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
 				"internalType": "contract AddressResolver",
 				"name": "_resolver",
 				"type": "address"
@@ -909,7 +923,7 @@
 				"type": "uint256"
 			}
 		],
-		"name": "transferableSynthetixAndAnyRateIsInvalid",
+		"name": "transferableSynthetixAndAnyRateIsStale",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -918,13 +932,13 @@
 			},
 			{
 				"internalType": "bool",
-				"name": "anyRateIsInvalid",
+				"name": "anyRateIsStale",
 				"type": "bool"
 			}
 		],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function",
-		"signature": "0x6bed0415"
+		"signature": "0xdb2b91cf"
 	}
 ]

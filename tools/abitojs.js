@@ -1,13 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
-const snx = require('synthetix');
+const snx = require('synthetix-a');
 const docsDescriptions = require('../lib/docSrc/descriptions');
 
 const SUPPORTED_NETWORKS = {
   1: 'mainnet',
   3: 'ropsten',
   4: 'rinkeby',
+  20: 'local',
   42: 'kovan',
 };
 
