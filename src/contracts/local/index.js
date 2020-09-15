@@ -14,6 +14,7 @@ import Issuer from './Issuer';
 import AddressResolver from './AddressResolver';
 import DelegateApprovals from './DelegateApprovals';
 import SystemStatus from './SystemStatus';
+import SystemSettings from './SystemSettings';
 import RewardsDistribution from './RewardsDistribution';
 import BinaryOptionMarketManager from './BinaryOptionMarketManager';
 import sEUR from './sEUR';
@@ -56,6 +57,7 @@ export default {
   AddressResolver,
   DelegateApprovals,
   SystemStatus,
+  SystemSettings,
   RewardsDistribution,
   BinaryOptionMarketManager,
   sEUR,

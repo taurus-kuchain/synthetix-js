@@ -53,6 +53,7 @@ const contracts = {
   AddressResolver: true,
   DelegateApprovals: true,
   SystemStatus: true,
+  SystemSettings: true,
   RewardsDistribution: true,
   BinaryOptionMarketManager: true,
   // the synths will be added on for each network
